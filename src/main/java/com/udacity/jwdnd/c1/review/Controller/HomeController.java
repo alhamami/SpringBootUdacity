@@ -1,4 +1,4 @@
-package com.udacity.jwdnd.c1.review;
+package com.udacity.jwdnd.c1.review.Controller;
 
 import java.time.Instant;
 import java.util.List;
@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.udacity.jwdnd.c1.review.Model.AnimalForm;
+import com.udacity.jwdnd.c1.review.Model.MessageForm;
+import com.udacity.jwdnd.c1.review.Service.MessageListService;
 
 @Controller
 public class HomeController {

@@ -1,10 +1,13 @@
-package com.udacity.jwdnd.c1.review;
+package com.udacity.jwdnd.c1.review.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import com.udacity.jwdnd.c1.review.Model.ChatForm;
+import com.udacity.jwdnd.c1.review.Service.MessageService;
 
 @Controller
 public class ChatController {
