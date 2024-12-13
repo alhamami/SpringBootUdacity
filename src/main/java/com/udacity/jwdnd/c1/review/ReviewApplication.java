@@ -18,17 +18,17 @@ public class ReviewApplication {
         return "Hello, Spring!";
     }
     
-    @Bean
-    public String uppercaseMessage(MessageService messageService){
-        System.out.println("uppercaseMessage done!");
-        return messageService.uppercase();
-    }
+    // @Bean
+    // public String uppercaseMessage(MessageService messageService){
+    //     System.out.println("uppercaseMessage done!");
+    //     return messageService.uppercase();
+    // }
 
 
-    @Bean
-    public String lowercaseMessage(MessageService messageService){
-        System.out.println("lowercaseMessage done!");
-        return messageService.lowercase();
-    }
+    // @Bean
+    // public String lowercaseMessage(MessageService messageService){
+    //     System.out.println("lowercaseMessage done!");
+    //     return messageService.lowercase();
+    // }
 
 }

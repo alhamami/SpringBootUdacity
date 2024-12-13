@@ -15,6 +15,9 @@ public class MessageListService {
 
     private List<AnimalForm> animals;
 
+    
+    private List<ChatMessage> chats;
+
     public  List<AnimalForm> getAnimals() {
         return animals;
     }
@@ -23,6 +26,7 @@ public class MessageListService {
     public void postConstruct(){
         this.messages = new ArrayList<>();
         this.animals = new ArrayList<>();
+        this.chats = new ArrayList<>();
     }
 
 
@@ -36,6 +40,40 @@ public class MessageListService {
 
     public void addAnimal(AnimalForm animal){
         this.animals.add(animal);
+    }
+
+    public void addChat(ChatMessage chatForm, String mode){
+
+        ChatMessage chat = new ChatMessage();
+
+
+        if(chatForm != null){
+            chat.setUsername(chatForm.getUsername());
+
+            switch (mode) {
+
+                case "Shout":
+    
+                    chat.setMessage(chatForm.getMessage().toUpperCase());
+                    break;
+    
+                case "Whisper":
+                    
+                    chat.setMessage(chatForm.getMessage().toLowerCase());
+                    break;
+            
+                default:
+                    break;
+            }
+    
+
+        }
+
+        chats.add(chat);
+    }
+
+    public List<ChatMessage> getChats(){
+        return chats;
     }
 
     
